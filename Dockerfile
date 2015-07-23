@@ -1,16 +1,16 @@
-FROM fedora
+FROM fedora:21
+MAINTAINER ryanj <ryanj@redhat.com>
 
-RUN yum install -y nodejs
-RUN yum install -y npm
-RUN yum install -y git
-RUN yum install -y bzip2
-
-RUN git clone https://github.com/ryanj/restify-base.git /app
+RUN yum -y update && yum clean all
+RUN yum -y install npm git bzip2 curl build-essential ca-certificates && yum clean all
 
 WORKDIR /app
 
-RUN npm install
+ADD package.json /app/
+RUN npm install --production
+ADD . /app/
 
 EXPOSE 8080
 
-CMD npm start
+CMD []
+ENTRYPOINT ["npm", "start"]
