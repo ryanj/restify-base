@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "config-multipaas": "^0.1.0",
-    "restify": "^3.0.2"
+    "restify": "^4.0.3"
   },
   "devDependencies": {
     "tap": "^0.4.13"
