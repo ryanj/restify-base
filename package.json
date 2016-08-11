@@ -12,7 +12,7 @@
     "restify": "^4.0.4"
   },
   "devDependencies": {
-    "tap": "^5.7.1"
+    "tap": "^6.3.1"
   },
   "repository": {
     "type": "git",
